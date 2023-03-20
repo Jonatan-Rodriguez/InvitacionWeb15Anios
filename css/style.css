@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Roboto&display=swap");
+/* misc */
+/* colors */
+/* spacings */
+/* font fasmily */
+/* font sizes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Cardo', serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  html body {
+    margin: 0;
+    background-color: #264653; }
+  html a {
+    text-decoration: none; }
+  html img {
+    width: 100%; }
+
+/* partials */
+/* pages */
+body {
+  background-color: aqua; }

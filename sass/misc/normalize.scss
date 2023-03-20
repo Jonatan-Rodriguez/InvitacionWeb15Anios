@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Cardo', serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    body{
+        margin: 0;
+        background-color: #264653;
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        width: 100%;
+    }
+}
