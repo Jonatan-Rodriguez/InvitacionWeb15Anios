@@ -1,3 +1,5 @@
+// ------------ clases de fullpage ---------------
+//contenedor de fullpage
 .fp-watermark {
     display: none;
 }
@@ -7,6 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+// estilos del menu de navegacion
+#fp-nav ul li a span{
+    background-color: $color-tertiary;
+}
+#fp-nav ul li .fp-tooltip{
+    font-family: $font-secondary;
+    color: $color-tertiary;
 }
 //estilos del contenedor
 .contenedor{
@@ -20,7 +30,6 @@
 
 // ------------ seccion 1 ---------------
 .section-1{
-    background-color: $color-primary;
     align-items: center;
     &__pic{
         width: 100%;
@@ -117,7 +126,18 @@
     }
 }
 
-// ------------ seccion 1 ---------------
-.section-2{
-    
+// ------------ seccion 3 ---------------
+.section-3{
+    .slide{
+        picture{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
 }
