@@ -42,17 +42,31 @@ html {
 
 .fp-controlArrow.fp-next,
 .fp-controlArrow.fp-prev {
-  top: 95%; }
+  top: 95%;
+  width: 90px;
+  height: 35px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .fp-controlArrow.fp-prev {
-  left: 65%;
-  border-width: 20px 20px 20px 0;
-  border-color: transparent #ef476f transparent transparent; }
+  left: 25%; }
+
+.fp-controlArrow.fp-prev::after {
+  content: "< Anterior";
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  color: white; }
 
 .fp-controlArrow.fp-next {
-  right: 8%;
-  border-width: 20px 0px 20px 20px;
-  border-color: transparent transparent transparent #ef476f; }
+  right: 25%; }
+
+.fp-controlArrow.fp-next::after {
+  content: "Siguiente >";
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  color: white; }
 
 .contenedor {
   width: 90%;
