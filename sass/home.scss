@@ -12,22 +12,32 @@
 }
 // estilos del menu de navegacion
 #fp-nav ul li a span{
-    background-color: $color-tertiary;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
 }
 #fp-nav ul li .fp-tooltip{
     font-family: $font-secondary;
-    color: $color-tertiary;
+    color: $text-color;
+}
+#fp-nav.fp-right{
+    right: 3px;
 }
 //estilos de las flechas del slide
 .fp-controlArrow.fp-next,
 .fp-controlArrow.fp-prev{
     top:95%;
     width: 90px;
-    height: 35px;
+    height: 33px;
     border: 1px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2.5px );
+    -webkit-backdrop-filter: blur( 2.5px );
 }
 .fp-controlArrow.fp-prev{
     left: 25%;
@@ -49,12 +59,36 @@
 }
 //estilos del contenedor
 .contenedor{
-    width: 90%;
+    width: 85%;
     max-width: 425px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+//estilos de los titulos
+.titulo{
+    h3{
+        font-size: $font-medium;
+        color: $text-color;
+        font-family: $font-primary;
+        text-align: center;
+        text-shadow: 2px 2px 2px #000;
+        font-weight: lighter;
+        margin-bottom: $spacing-base;
+    }
+}
+//Estilos de los textos
+.text{
+    h3{
+        font-size: $font-base;
+        color: $text-color;
+        font-family: $font-secondary;
+        font-weight: lighter;
+        line-height: $spacing-base;
+        opacity: 0.8;
+        text-align: center;
+    }
 }
 
 // ------------ seccion 1 ---------------
@@ -155,6 +189,102 @@
     }
 }
 
+// ------------ seccion 2 ---------------
+.section-2{
+    background-image: url(../asset/img/dondeCuando.jpg);
+    .contenedor{
+        .text{
+            h3{
+                text-align: start;
+            }
+        }
+        .btn-box{
+
+            //boton ubicacion
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 230px;
+                height: 45px;
+                border: 1px solid white;
+                margin: $spacing-small 0;
+
+                background: rgba( 255, 255, 255, 0.25 );
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                backdrop-filter: blur( 5px );
+                -webkit-backdrop-filter: blur( 5px );
+
+                span{
+                    font-size: $font-small;
+                    color: $text-color;
+                    font-family: $font-secondary;
+                    margin-right: 7px;
+                }
+                .circulo{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                }
+            }
+        }
+        .container-slider{
+            width: 100%;
+            max-width: 900px;
+            overflow: hidden;
+            position: relative;
+
+            .slider{
+                display: flex;
+                flex-direction: row;
+                width: 300%;
+                height: 200px;
+                margin-left: -100%;
+
+                .slider__section{
+                    width: 100%;
+                    .slider__img{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 40px;
+                    }
+                }
+            }
+
+            .slider__btn{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: rgba(255,255,255,0.7);
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 30px;
+                font-weight: bold;
+                font-family: monospace;
+                text-align: center;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            /* .slider__btn:hover{
+                background-color: #fff;
+            } */
+            .slider__btn--left{
+                left: 10px;
+            }
+            .slider__btn--right{
+                right: 10px;
+            }
+        }
+        
+    }
+}
 // ------------ seccion 3 ---------------
 .section-3{
     .slide{

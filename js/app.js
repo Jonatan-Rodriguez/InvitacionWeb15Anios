@@ -4,6 +4,7 @@ const seccionesPaginas = new fullpage('#fullpage',{
   anchors: ['inicio', 'infoEvento', 'galeria','regalos','mesa','confirmacion'],
   navigationTooltips: ['Inicio', 'Donde y cuando', 'Galeria de fotos','Regalos','Mesas','Confirmacion'],
   sectionsColor : ['#000', '#ffd166', '#ef476f','#06d6a0','#118ab2','#073b4c'],
+  verticalCentered: true,
 });
 
 /*
@@ -82,3 +83,51 @@ const getRemainingTime = deadline => {
   };
   
   countdown('Dec 04 2023 21:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');
+
+//Slider de fotos
+const slider = document.querySelector("#slider");
+let sliderSection = document.querySelectorAll(".slider__section");
+let sliderSectionLast = sliderSection[sliderSection.length -1];
+
+const btnLeft = document.querySelector("#btn-left");
+const btnRight = document.querySelector("#btn-right");
+
+//corremos la ultima foto al primer lugar
+slider.insertAdjacentElement('afterbegin', sliderSectionLast);
+
+function next(){
+  let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
+  slider.style.marginLeft="-200%";
+  slider.style.transition = "all 0.5s";
+
+  setTimeout(function(){
+    slider.style.transition= "none";
+    slider.insertAdjacentElement('beforeend', sliderSectionFirst);
+    slider.style.marginLeft = "-100%";
+  }, 500);
+};
+
+function prev(){
+  let sliderSection = document.querySelectorAll(".slider__section");
+  let sliderSectionLast = sliderSection[sliderSection.length -1];
+  slider.style.marginLeft="0";
+  slider.style.transition = "all 0.5s";
+
+  setTimeout(function(){
+    slider.style.transition= "none";
+    slider.insertAdjacentElement('afterbegin', sliderSectionLast);
+    slider.style.marginLeft = "-100%";
+  }, 500);
+}
+
+btnRight.addEventListener('click', function(){
+  next();
+});
+
+btnLeft.addEventListener('click', function(){
+  prev();
+});
+
+/* setInterval(function(){
+  next();
+},5000); */
