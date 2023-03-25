@@ -18,6 +18,21 @@
     font-family: $font-secondary;
     color: $color-tertiary;
 }
+//estilos de las flechas del slide
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev{
+    top:95%;
+}
+.fp-controlArrow.fp-prev{
+    left: 65%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent $color-tertiary transparent transparent;
+}
+.fp-controlArrow.fp-next{
+    right: 8%;
+    border-width: 20px 0px 20px 20px;
+    border-color: transparent transparent transparent $color-tertiary;
+}
 //estilos del contenedor
 .contenedor{
     width: 90%;
