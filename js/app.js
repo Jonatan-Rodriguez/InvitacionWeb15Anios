@@ -82,7 +82,7 @@ const getRemainingTime = deadline => {
     }, 1000)
   };
   
-  countdown('Dec 04 2023 21:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');
+  countdown('Aug 26 2023 21:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');
 
 //Slider de fotos
 const slider = document.querySelector("#slider");
@@ -128,6 +128,42 @@ btnLeft.addEventListener('click', function(){
   prev();
 });
 
-/* setInterval(function(){
-  next();
-},5000); */
+//copy paste
+let inputCbu = document.getElementById(`inputCbu`);
+let btnCbu = document.getElementById(`btnCbu`);
+let inputAlias = document.getElementById(`inputAlias`);
+let btnAlias = document.getElementById(`btnAlias`); 
+let noti = document.getElementById(`noti`);
+let notificacion = document.getElementById(`notificacion`);
+  
+btnCbu.addEventListener(`click`, ()=>{
+    inputCbu.focus();
+    document.execCommand(`selectAll`);
+    document.execCommand(`copy`);
+    
+    /* setTimeout(()=>{
+        noti.classList.add(`noti-active`);
+        notificacion.classList.add(`notificacion-active`);
+    },500);
+  
+    setTimeout(()=>{
+      noti.classList.remove(`noti-active`);
+      notificacion.classList.remove(`notificacion-active`);
+  },3400); */
+});
+  
+btnAlias.addEventListener(`click`, ()=>{
+    inputAlias.focus();
+    document.execCommand(`selectAll`);
+    document.execCommand(`copy`);
+    
+    /* setTimeout(()=>{
+      noti.classList.add(`noti-active`);
+      notificacion.classList.add(`notificacion-active`);
+    },500);
+
+    setTimeout(()=>{
+      noti.classList.remove(`noti-active`);
+      notificacion.classList.remove(`notificacion-active`);
+    },3400); */
+});

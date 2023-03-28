@@ -36,8 +36,8 @@ html {
 #fp-nav ul li a span {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); }
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px); }
 
 #fp-nav ul li .fp-tooltip {
   font-family: "Roboto", sans-serif;
@@ -179,7 +179,9 @@ html {
     transform: translateY(20px); } }
 
 .section-2 {
-  background-image: url(../asset/img/dondeCuando.jpg); }
+  background-image: url(../asset/img/dondeCuando.jpg);
+  background-position: center;
+  background-size: cover; }
   .section-2 .contenedor .text h3 {
     text-align: start; }
   .section-2 .contenedor .btn-box .btn {
@@ -213,9 +215,7 @@ html {
     max-width: 900px;
     overflow: hidden;
     position: relative;
-    /* .slider__btn:hover{
-                background-color: #fff;
-            } */ }
+    border: 1px solid white; }
     .section-2 .contenedor .container-slider .slider {
       display: flex;
       flex-direction: row;
@@ -228,8 +228,7 @@ html {
           display: block;
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          border-radius: 40px; }
+          object-fit: cover; }
     .section-2 .contenedor .container-slider .slider__btn {
       position: absolute;
       width: 40px;
@@ -240,9 +239,19 @@ html {
       font-size: 30px;
       font-weight: bold;
       font-family: monospace;
-      text-align: center;
       border-radius: 50%;
-      cursor: pointer; }
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid white;
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(2.5px);
+      -webkit-backdrop-filter: blur(2.5px); }
+      .section-2 .contenedor .container-slider .slider__btn .iconify {
+        color: white;
+        font-size: 1.2em; }
     .section-2 .contenedor .container-slider .slider__btn--left {
       left: 10px; }
     .section-2 .contenedor .container-slider .slider__btn--right {
@@ -256,3 +265,144 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+
+.section-4 {
+  background: url(../asset/img/regalos.jpg);
+  background-position: center;
+  background-size: cover; }
+  .section-4 .contenedor .box {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+    height: 350px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; }
+    .section-4 .contenedor .box .box__text span {
+      font-size: 2.3em;
+      font-family: "Roboto", sans-serif; }
+    .section-4 .contenedor .box .copy {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column; }
+      .section-4 .contenedor .box .copy .cbu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 15px; }
+        .section-4 .contenedor .box .copy .cbu .text-cbu span {
+          font-size: 1.5em;
+          font-family: "Roboto", sans-serif; }
+        .section-4 .contenedor .box .copy .cbu .cbu-input {
+          min-width: 210px;
+          width: 100%;
+          height: 30px;
+          font-size: 15px;
+          border-radius: 20px;
+          border: none;
+          padding-left: 10px;
+          text-align: center;
+          outline: none;
+          pointer-events: none; }
+        .section-4 .contenedor .box .copy .cbu .cbu-input:focus {
+          outline: none; }
+        .section-4 .contenedor .box .copy .cbu .cbu-input::-moz-selection {
+          background-color: transparent; }
+        .section-4 .contenedor .box .copy .cbu .cbu-input::selection {
+          background-color: transparent; }
+        .section-4 .contenedor .box .copy .cbu .btn-copy {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 210px;
+          width: 100%;
+          height: 30px;
+          background-color: white;
+          font-size: 20px;
+          border-radius: 20px;
+          cursor: pointer;
+          font-family: "Roboto", sans-serif; }
+      .section-4 .contenedor .box .copy .alias {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 15px; }
+        .section-4 .contenedor .box .copy .alias .text-alias span {
+          font-size: 1.5em;
+          font-family: "Roboto", sans-serif; }
+        .section-4 .contenedor .box .copy .alias .alias-input {
+          min-width: 210px;
+          width: 100%;
+          height: 30px;
+          font-size: 15px;
+          border-radius: 20px;
+          border: none;
+          padding-left: 10px;
+          text-align: center;
+          outline: none;
+          pointer-events: none; }
+        .section-4 .contenedor .box .copy .alias .alias-input:focus {
+          outline: none; }
+        .section-4 .contenedor .box .copy .alias .alias-input::-moz-selection {
+          background-color: transparent; }
+        .section-4 .contenedor .box .copy .alias .alias-input::selection {
+          background-color: transparent; }
+        .section-4 .contenedor .box .copy .alias .btn-copy {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 210px;
+          width: 100%;
+          height: 30px;
+          background-color: white;
+          font-size: 20px;
+          border-radius: 20px;
+          cursor: pointer;
+          font-family: "Roboto", sans-serif; }
+  .section-4 .contenedor .noti {
+    width: 100%;
+    height: 1px;
+    background-color: #ef476f;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 0px 0px 0px #ef476f;
+    transform: translateY(1px);
+    z-index: 2; }
+  .section-4 .contenedor .noti-active {
+    animation: 1.5s ease 0s infinite alternate noti-animation; }
+
+@keyframes noti-animation {
+  to {
+    box-shadow: 0 -10px 120px 90px #ef476f; } }
+  .section-4 .contenedor .notificacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    position: fixed;
+    bottom: -45px;
+    z-index: 3; }
+  .section-4 .contenedor .notificacion-active {
+    animation: 1.4s ease 0s infinite alternate notificacion-animation; }
+
+@keyframes notificacion-animation {
+  to {
+    bottom: 35px; } }
