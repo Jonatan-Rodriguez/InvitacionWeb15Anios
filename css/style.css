@@ -270,6 +270,8 @@ html {
   background: url(../asset/img/regalos.jpg);
   background-position: center;
   background-size: cover; }
+  .section-4 .contenedor .text {
+    margin-bottom: 2rem; }
   .section-4 .contenedor .box {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -372,22 +374,27 @@ html {
           border-radius: 20px;
           cursor: pointer;
           font-family: "Roboto", sans-serif; }
-  .section-4 .contenedor .noti {
+
+.contenedor-noti {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .contenedor-noti .noti {
     width: 100%;
     height: 1px;
-    background-color: #ef476f;
+    background-color: #52b788;
     position: fixed;
     bottom: 0;
-    box-shadow: 0 0px 0px 0px #ef476f;
+    box-shadow: 0 0px 0px 0px #52b788;
     transform: translateY(1px);
     z-index: 2; }
-  .section-4 .contenedor .noti-active {
+  .contenedor-noti .noti-active {
     animation: 1.5s ease 0s infinite alternate noti-animation; }
 
 @keyframes noti-animation {
   to {
-    box-shadow: 0 -10px 120px 90px #ef476f; } }
-  .section-4 .contenedor .notificacion {
+    box-shadow: 0 -10px 120px 90px #52b788; } }
+  .contenedor-noti .notificacion {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -400,7 +407,7 @@ html {
     position: fixed;
     bottom: -45px;
     z-index: 3; }
-  .section-4 .contenedor .notificacion-active {
+  .contenedor-noti .notificacion-active {
     animation: 1.4s ease 0s infinite alternate notificacion-animation; }
 
 @keyframes notificacion-animation {

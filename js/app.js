@@ -141,7 +141,7 @@ btnCbu.addEventListener(`click`, ()=>{
     document.execCommand(`selectAll`);
     document.execCommand(`copy`);
     
-    /* setTimeout(()=>{
+    setTimeout(()=>{
         noti.classList.add(`noti-active`);
         notificacion.classList.add(`notificacion-active`);
     },500);
@@ -149,7 +149,7 @@ btnCbu.addEventListener(`click`, ()=>{
     setTimeout(()=>{
       noti.classList.remove(`noti-active`);
       notificacion.classList.remove(`notificacion-active`);
-  },3400); */
+  },3400);
 });
   
 btnAlias.addEventListener(`click`, ()=>{
@@ -157,7 +157,7 @@ btnAlias.addEventListener(`click`, ()=>{
     document.execCommand(`selectAll`);
     document.execCommand(`copy`);
     
-    /* setTimeout(()=>{
+    setTimeout(()=>{
       noti.classList.add(`noti-active`);
       notificacion.classList.add(`notificacion-active`);
     },500);
@@ -165,5 +165,5 @@ btnAlias.addEventListener(`click`, ()=>{
     setTimeout(()=>{
       noti.classList.remove(`noti-active`);
       notificacion.classList.remove(`notificacion-active`);
-    },3400); */
+    },3400);
 });
