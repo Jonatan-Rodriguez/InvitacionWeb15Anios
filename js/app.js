@@ -167,3 +167,13 @@ btnAlias.addEventListener(`click`, ()=>{
       notificacion.classList.remove(`notificacion-active`);
     },3400);
 });
+
+//Formulario de confirmacion
+const send = document.getElementById('send')
+const enviarFormulario =() => {
+        let nombre = document.getElementById('nombre').value;
+        let numero= 5491123901151;
+var win= window.open(`https://wa.me/${numero}?text=Hola%20,si!%20confirmo😊%20soy%20${nombre},%20gracias%20por%20invitarme😁
+`,'_blank');     
+}
+send.addEventListener('click', enviarFormulario);

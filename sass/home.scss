@@ -452,6 +452,74 @@
     }
 }
 
+// ------------ seccion 6 ---------------
+.section-6{
+    background: url(../asset/img/asistencia.jpg);
+
+    .contenedor{
+        .text{
+            margin-bottom: $spacing-small;
+        }
+        .box{
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 5px );
+            -webkit-backdrop-filter: blur( 5px );
+            border: 1px solid white;
+            width: 100%;
+            border-radius: 10px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            row-gap: 20px;
+
+            .form{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                row-gap: 15px;
+                .box__check{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+    
+                    span{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                .box__name{
+                    min-width: 210px;
+                    width: 100%;
+                    height: 30px;
+                    font-size: 15px;
+                    border-radius: 20px;
+                    border: none;
+                    padding-left: 10px;
+                    text-align: center;
+                    font-family: $font-secondary;
+                }
+                .box__send{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 210px;
+                    width: 100%;
+                    height: 30px;
+                    background-color: white;
+                    font-size: 20px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-family: $font-secondary;
+                }
+            }
+        }
+    }
+}
+
 // estilos de la animacion de la notificacion copy-page
 .contenedor-noti{
     display: flex;
