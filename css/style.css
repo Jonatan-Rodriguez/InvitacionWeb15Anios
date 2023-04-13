@@ -288,7 +288,9 @@ html {
     flex-direction: column; }
     .section-4 .contenedor .box .box__text span {
       font-size: 2.3em;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Roboto", sans-serif;
+      color: white;
+      letter-spacing: 0.5px; }
     .section-4 .contenedor .box .copy {
       width: 100%;
       height: 100%;
@@ -393,19 +395,29 @@ html {
     justify-content: space-around;
     align-items: center;
     row-gap: 20px; }
+    .section-6 .contenedor .box span {
+      font-size: 2.3em;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 0.7px; }
     .section-6 .contenedor .box .form {
       display: flex;
       justify-content: center;
       flex-direction: column;
       row-gap: 15px; }
-      .section-6 .contenedor .box .form .box__check {
-        display: flex;
+      .section-6 .contenedor .box .form .warning {
+        width: 100%;
+        display: none;
         align-items: center;
-        justify-content: space-around; }
-        .section-6 .contenedor .box .form .box__check span {
-          display: flex;
-          justify-content: center;
-          align-items: center; }
+        justify-content: center;
+        border: 2px solid #ff006e;
+        background-color: rgba(255, 0, 111, 0.4);
+        border-radius: 5px; }
+        .section-6 .contenedor .box .form .warning p {
+          text-align: center;
+          font-size: 13px;
+          color: white;
+          font-family: "Roboto", sans-serif; }
       .section-6 .contenedor .box .form .box__name {
         min-width: 210px;
         width: 100%;
@@ -423,11 +435,14 @@ html {
         min-width: 210px;
         width: 100%;
         height: 30px;
-        background-color: white;
+        background-color: #52b788;
         font-size: 20px;
         border-radius: 20px;
         cursor: pointer;
-        font-family: "Roboto", sans-serif; }
+        font-family: "Roboto", sans-serif;
+        border: 2px solid white;
+        color: white;
+        letter-spacing: 1px; }
 
 .contenedor-noti {
   display: flex;
@@ -467,3 +482,79 @@ html {
 @keyframes notificacion-animation {
   to {
     bottom: 35px; } }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.radio-tile-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.radio-tile-group .input-container {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  margin: 0.5rem; }
+
+.radio-tile-group .input-container .radio-button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer; }
+
+.radio-tile-group .input-container .radio-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: transform 300ms ease; }
+
+.radio-tile-group .input-container .check-1 {
+  border: 2px solid #3a86ff;
+  background-color: rgba(59, 134, 255, 0.4); }
+
+.radio-tile-group .input-container .check-2 {
+  border: 2px solid #ff006e;
+  background-color: rgba(255, 0, 111, 0.4); }
+
+.radio-tile-group .input-container .radio-tile-label {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white; }
+
+.radio-tile-group .input-container .radio-button:checked + .radio-tile {
+  color: white;
+  transform: scale(1.1, 1.1); }
+
+.radio-tile-group .input-container .radio-button:checked + .check-1 {
+  background-color: #3a86ff;
+  border: 2px solid #3a86ff; }
+
+.radio-tile-group .input-container .radio-button:checked + .check-2 {
+  background-color: #ff006e;
+  border: 2px solid #ff006e; }
+
+.radio-tile-group .input-container .radio-button + .radio-tile .icon svg {
+  font-size: 45px;
+  color: white; }
+
+.radio-tile-group .input-container .radio-button:checked + .check-1 .radio-tile-label {
+  color: white;
+  background-color: #3a86ff; }
+
+.radio-tile-group .input-container .radio-button:checked + .check-2 .radio-tile-label {
+  color: white;
+  background-color: #ff006e; }

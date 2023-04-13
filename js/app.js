@@ -1,53 +1,11 @@
 const seccionesPaginas = new fullpage('#fullpage',{
 
   navigation: true,
-  anchors: ['inicio', 'infoEvento', 'galeria','regalos','mesa','confirmacion'],
-  navigationTooltips: ['Inicio', 'Donde y cuando', 'Galeria de fotos','Regalos','Mesas','Confirmacion'],
+  anchors: ['inicio', 'infoEvento', 'galeria','regalos','confirmacion'],
+  navigationTooltips: ['Inicio', 'Donde y cuando', 'Galeria de fotos','Regalos','Confirmacion'],
   sectionsColor : ['#000', '#ffd166', '#ef476f','#06d6a0','#118ab2','#073b4c'],
   verticalCentered: true,
 });
-
-/*
-  var seccionesPagina = new fullpage('#fullpage',{
-	// ──────────────────────────────────────────────────
-	//   :::::: Opciones Basicas
-	// ──────────────────────────────────────────────────
-		 autoScrolling: true, // Se activa el scroll.
-		 fitToSection: false, // Acomoda el scroll automaticamente para que la seccion se muestre en pantalla.
-		 fitToSectionDelay: 300, // Delay antes de acomodar la seccion automaticamente.
-		 easing: 'easeInOutCubic', // Funcion de tiempo de la animacion.
-		 scrollingSpeed: 700, // Velocidad del scroll. Valores: en milisegundos.
-		 css3: true, // Si usara CSS3 o javascript.
-		 easingcss3: 'ease-out', // Curva de velocidad del efecto.
-		 loopBottom: false, // Regresa a la primera seccion siempre y cuando se ya haya llegado a la ultima sección y el ususario siga scrolleando.
-	// ──────────────────────────────────────────────────
-	//   :::::: Barra de navegación
-	// ──────────────────────────────────────────────────
-		 navigation: true, // Muesta la barra de navegación.
-		 menu: '#menu', // Menu de navegación.
-		 anchors: ['inicio', 'productos', 'contacto'], // Anclas, las usamos para identificar cada seccion y poder acceder a ellas con el menu.
-		 navigationTooltips: ['Inicio', 'Productos', 'Contacto'], // Tooltips que mostrara por cada boton.
-		 showActiveTooltip: false, // Mostrar tooltip activa.
-	// ──────────────────────────────────────────────────
-	//   :::::: Secciones
-	// ──────────────────────────────────────────────────
-		 sectionsColor : ['#000', '#c2c2c2', '#000'], // Color de fondo de cada seccion.
-		 verticalCentered: true, // Si alineara de forma vertical los contenidos de cada seccion.
-	// ──────────────────────────────────────────────────
-	//   :::::: Slides
-	// ──────────────────────────────────────────────────
-		 controlArrows: true, // Flechas del slide
-		 slidesNavigation: false, // Indicadores del slide
-	// ──────────────────────────────────────────────────
-	//   :::::: Animaciones (Callbacks de FullPage.js)
-	// ──────────────────────────────────────────────────
-	afterLoad: function(origin, destination){
-		 if(destination.anchor == 'contacto'){
-			  document.querySelector('.footer').querySelector('h2').style.opacity = 1;
-		 }
-	}
-});
-*/
 
 //Cuenta regresiva
 const getRemainingTime = deadline => {
@@ -169,11 +127,48 @@ btnAlias.addEventListener(`click`, ()=>{
 });
 
 //Formulario de confirmacion
-const send = document.getElementById('send')
-const enviarFormulario =() => {
-        let nombre = document.getElementById('nombre').value;
-        let numero= 5491123901151;
-var win= window.open(`https://wa.me/${numero}?text=Hola%20,si!%20confirmo😊%20soy%20${nombre},%20gracias%20por%20invitarme😁
-`,'_blank');     
-}
-send.addEventListener('click', enviarFormulario);
+const send = document.getElementById('send');
+const form = document.getElementById('form');
+const nombre = document.getElementById('nombre');
+const check1 = document.getElementById('check1');
+const check2 = document.getElementById('check2');
+const warning = document.getElementById('warning');
+const warning2 = document.getElementById('warning2');
+
+
+form.addEventListener("submit",(e)=>{
+  e.preventDefault();
+  warning.style.display='none';/* 
+  warning2.style.display='none'; */
+
+  let nombre = document.getElementById('nombre').value;
+
+  /* if(nombre.length <= 2){
+    warning2.style.display='flex';
+  } */
+  
+  let numero= 5491123901151;
+  let opcion;
+
+  for(let i = 0 ; i < form.opcion.length ; i++){
+    if(form.opcion[i].checked == true){
+      opcion = i;
+    }
+  }
+
+  switch (opcion){
+    case 0:
+            var win= window.open(`https://wa.me/${numero}?text=Hola%20,si%20puedo%20asistir%20:)%20soy%20${nombre},%20gracias%20por%20invitarme
+  `,'_blank');
+    break;
+
+    case 1: 
+            var win= window.open(`https://wa.me/${numero}?text=Hola%20,perdon%20no%20puedo%20asistir%20:(%20soy%20${nombre},%20gracias%20por%20invitarme
+  `,'_blank');
+    break;
+
+    default: warning.style.display='flex';
+    break;
+  }
+});
+

@@ -105,9 +105,9 @@
                 
             </div>
         </section>
-        <section class="section section-5">
+        <!-- <section class="section section-5">
             <h2>Mesa de invitados</h2>
-        </section>
+        </section> -->
         <section class="section section-6">
             <div class="contenedor">
                 <div class="titulo">
@@ -117,14 +117,43 @@
                     <h3>¡No te olvides, es MUY importante que me confirmes tu asistencia!</h3>
                 </div>
                 <div class="box">
-                    <h3>¿Asistes al cumpleaños?</h3>
-                    <form class="form" action="">
+                    <span>¿Puedes asisitir?</span>
+                    <form class="form" action="" method="post" id="form">
+                        <div id="warning" class="warning">
+                            <p>Seleccione una opcion</p>
+                        </div>
                         <div class="box__check">
-                            <span><input type="checkbox" id="checkbox1">Si! confirmo</span>
-                            <span><input type="checkbox" id="checkbox2">No puedo :&#40;</span>
+                            <div class="container">
+                                <div class="radio-tile-group">
+                                    <div class="input-container">
+                                        <input id="check1" class="radio-button" type="radio" name="opcion">
+                                        <div class="radio-tile check-1">
+                                            <div class="icon walk-icon">
+                                                <span class="iconify" data-icon="icon-park-outline:emotion-happy"></span>
+                                            </div>
+                                            <label class="radio-tile-label">Si puedo</label>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="input-container">
+                                        <input id="check2" class="radio-button" type="radio" name="opcion">
+                                        <div class="radio-tile check-2">
+                                            <div class="icon car-icon">
+                                                <span class="iconify" data-icon="icon-park-outline:emotion-unhappy"></span>
+                                            </div>
+                                            <label class="radio-tile-label">No puedo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
+
                         </div>
                         <input class="box__name" type="text" id="nombre" placeholder="Nombre" required autocomplete="off">
-                        <button class="box__send" id="send">Enviar</button>
+                        <!-- <div id="warning2" class="warning">
+                            <p>Nombre invalido</p>
+                        </div> -->
+                        <button class="box__send" type="submit" id="send">Enviar</button>
                     </form>
                 </div>
             </div>
