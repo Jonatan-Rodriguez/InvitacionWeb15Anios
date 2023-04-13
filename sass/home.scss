@@ -191,7 +191,7 @@
 
 // ------------ seccion 2 ---------------
 .section-2{
-    background-image: url(../asset/img/dondeCuando.jpg);
+    background-image: url(../asset/img/donde.jpg);
     background-position: center;
 	background-size: cover;
     .contenedor{
@@ -456,8 +456,9 @@
 
 // ------------ seccion 6 ---------------
 .section-6{
-    background: url(../asset/img/asistencia.jpg);
-
+    background: url(../asset/img/confirmacion.jpg);
+    background-position: center;
+	background-size: cover;
     .contenedor{
         .text{
             margin-bottom: $spacing-small;

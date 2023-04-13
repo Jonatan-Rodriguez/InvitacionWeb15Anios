@@ -179,7 +179,7 @@ html {
     transform: translateY(20px); } }
 
 .section-2 {
-  background-image: url(../asset/img/dondeCuando.jpg);
+  background-image: url(../asset/img/donde.jpg);
   background-position: center;
   background-size: cover; }
   .section-2 .contenedor .text h3 {
@@ -378,7 +378,9 @@ html {
           font-family: "Roboto", sans-serif; }
 
 .section-6 {
-  background: url(../asset/img/asistencia.jpg); }
+  background: url(../asset/img/confirmacion.jpg);
+  background-position: center;
+  background-size: cover; }
   .section-6 .contenedor .text {
     margin-bottom: 2rem; }
   .section-6 .contenedor .box {
