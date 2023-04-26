@@ -1,9 +1,9 @@
 const seccionesPaginas = new fullpage('#fullpage',{
 
   navigation: true,
-  anchors: ['inicio', 'infoEvento', 'galeria','regalos','confirmacion'],
-  navigationTooltips: ['Inicio', 'Donde y cuando', 'Galeria de fotos','Regalos','Confirmacion'],
-  sectionsColor : ['#000', '#ffd166', '#ef476f','#06d6a0','#118ab2','#073b4c'],
+  anchors: ['inicio', 'infoEvento', 'galeria',/* 'regalos', */'confirmacion'],
+  navigationTooltips: ['Inicio', 'Donde y cuando', 'Galeria de fotos',/* 'Regalos', */'Confirmacion'],
+  sectionsColor : ['#000', '#ffd166', '#ef476f','#06d6a0'/* ,'#118ab2','#073b4c' */],
   verticalCentered: true,
 });
 
@@ -40,7 +40,7 @@ const getRemainingTime = deadline => {
     }, 1000)
   };
   
-  countdown('Aug 26 2023 21:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');
+  countdown('Apr 30 2023 15:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');
 
 //Slider de fotos
 const slider = document.querySelector("#slider");
