@@ -87,7 +87,7 @@ btnLeft.addEventListener('click', function(){
 });
 
 //copy paste
-let inputCbu = document.getElementById(`inputCbu`);
+/* let inputCbu = document.getElementById(`inputCbu`);
 let btnCbu = document.getElementById(`btnCbu`);
 let inputAlias = document.getElementById(`inputAlias`);
 let btnAlias = document.getElementById(`btnAlias`); 
@@ -124,7 +124,7 @@ btnAlias.addEventListener(`click`, ()=>{
       noti.classList.remove(`noti-active`);
       notificacion.classList.remove(`notificacion-active`);
     },3400);
-});
+}); */
 
 //Formulario de confirmacion
 const send = document.getElementById('send');
