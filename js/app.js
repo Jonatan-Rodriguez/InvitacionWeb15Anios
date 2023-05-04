@@ -40,7 +40,7 @@ const getRemainingTime = deadline => {
     }, 1000)
   };
   
-  countdown('Apr 30 2023 15:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');
+  countdown('Jun 30 2023 21:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');
 
 //Slider de fotos
 const slider = document.querySelector("#slider");
@@ -87,7 +87,7 @@ btnLeft.addEventListener('click', function(){
 });
 
 //copy paste
-/* let inputCbu = document.getElementById(`inputCbu`);
+let inputCbu = document.getElementById(`inputCbu`);
 let btnCbu = document.getElementById(`btnCbu`);
 let inputAlias = document.getElementById(`inputAlias`);
 let btnAlias = document.getElementById(`btnAlias`); 
@@ -124,7 +124,7 @@ btnAlias.addEventListener(`click`, ()=>{
       noti.classList.remove(`noti-active`);
       notificacion.classList.remove(`notificacion-active`);
     },3400);
-}); */
+});
 
 //Formulario de confirmacion
 const send = document.getElementById('send');
