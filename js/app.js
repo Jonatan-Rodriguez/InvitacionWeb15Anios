@@ -1,9 +1,9 @@
 const seccionesPaginas = new fullpage('#fullpage',{
 
   navigation: true,
-  anchors: ['inicio', 'infoEvento', 'galeria',/* 'regalos', */'confirmacion'],
-  navigationTooltips: ['Inicio', 'Donde y cuando', 'Galeria de fotos',/* 'Regalos', */'Confirmacion'],
-  sectionsColor : ['#000', '#ffd166', '#ef476f','#06d6a0'/* ,'#118ab2','#073b4c' */],
+  anchors: ['inicio', 'infoEvento', 'galeria','regalos','confirmacion'],
+  navigationTooltips: ['Inicio', 'Donde y cuando', 'Galeria de fotos', 'Regalos', 'Confirmacion'],
+  sectionsColor : ['#000', '#ffd166', '#ef476f','#06d6a0' ,'#118ab2'],
   verticalCentered: true,
 });
 
@@ -138,14 +138,9 @@ const warning2 = document.getElementById('warning2');
 
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
-  warning.style.display='none';/* 
-  warning2.style.display='none'; */
+  warning.style.display='none';
 
   let nombre = document.getElementById('nombre').value;
-
-  /* if(nombre.length <= 2){
-    warning2.style.display='flex';
-  } */
   
   let numero= 5491123901151;
   let opcion;
